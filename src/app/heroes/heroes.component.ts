@@ -18,10 +18,7 @@ export class HeroesComponent implements OnInit {
   }
 
   //Object hero of class Hero , with id= and name=
-  hero: Hero={
-  	id: 1,
-  	name: 'WindStorm'
-  };
+  hero: Hero;
 
   	//Creating Array of Objects
   // heroines: Heroine[]=[{
@@ -36,7 +33,7 @@ export class HeroesComponent implements OnInit {
   // }]
 
   heroList:Hero[]=[
-  
+
   { id: 11, name: 'Mr. Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },
@@ -48,6 +45,13 @@ export class HeroesComponent implements OnInit {
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' }
 ];
+
+displayHero(catchedHero: Hero): void {
+
+		// console.log(catchedHero);
+	this.hero = catchedHero;
+	console.log(this.hero);
+}
 
   
 

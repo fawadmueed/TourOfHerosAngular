@@ -1,3 +1,4 @@
+<div *ngIf="hero">
 
 <h3> {{ hero.name | uppercase }} Details </h3>
 <div><span>Id:</span> {{ hero.id }}</div>
@@ -7,14 +8,19 @@
 </label>
 </div>
 
-<br>
 
+
+<!-- Use of *ngFor as Loop. Host element is li, will repeat Host element for each item  -->
+</div>
 <div>
-		<li *ngFor="let hero of heroList">
+	<ul>
+		<li *ngFor="let hero of heroList" (click)="displayHero(hero)">
 			<span>{{ hero.name | uppercase }}</span>
 			<span>{{ hero.id }}</span>
 		</li>
+	</ul>
 </div>
+
 
 <!-- ngModel is used for Two Way Data Binding -->
 
