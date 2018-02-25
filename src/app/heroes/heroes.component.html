@@ -7,6 +7,14 @@
 </label>
 </div>
 
+<br>
+
+<div>
+		<li *ngFor="let hero of heroList">
+			<span>{{ hero.name | uppercase }}</span>
+			<span>{{ hero.id }}</span>
+		</li>
+</div>
 
 <!-- ngModel is used for Two Way Data Binding -->
 

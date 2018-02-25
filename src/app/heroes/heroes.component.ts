@@ -23,16 +23,32 @@ export class HeroesComponent implements OnInit {
   	name: 'WindStorm'
   };
 
-  heroine1: Heroine={
-  	id:202,
-  	name:'Hira',
-  	sex:'Female'
-  }
+  	//Creating Array of Objects
+  // heroines: Heroine[]=[{
+  // 	id:202,
+  // 	name:'Hira',
+  // 	sex:'Female'
+  // },
+  // {
+  // 	id:204,
+  // 	name:'Anabia',
+  // 	sex:'Female'
+  // }]
 
-  heroine2: Heroine={
-  	id:204,
-  	name:'Anabia',
-  	sex:'Female'
-  }
+  heroList:Hero[]=[
+  
+  { id: 11, name: 'Mr. Nice' },
+  { id: 12, name: 'Narco' },
+  { id: 13, name: 'Bombasto' },
+  { id: 14, name: 'Celeritas' },
+  { id: 15, name: 'Magneta' },
+  { id: 16, name: 'RubberMan' },
+  { id: 17, name: 'Dynama' },
+  { id: 18, name: 'Dr IQ' },
+  { id: 19, name: 'Magma' },
+  { id: 20, name: 'Tornado' }
+];
+
+  
 
 }
