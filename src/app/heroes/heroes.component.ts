@@ -32,7 +32,7 @@ export class HeroesComponent implements OnInit {
   // 	sex:'Female'
   // }]
 
-  heroList:Hero[]=[
+  heroList : Hero[]=[
 
   { id: 11, name: 'Mr. Nice' },
   { id: 12, name: 'Narco' },
@@ -50,7 +50,7 @@ displayHero(catchedHero: Hero): void {
 
 		// console.log(catchedHero);
 	this.hero = catchedHero;
-	console.log(this.hero);
+
 }
 
   

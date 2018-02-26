@@ -1,25 +1,46 @@
-<div *ngIf="hero">
 
-<h3> {{ hero.name | uppercase }} Details </h3>
-<div><span>Id:</span> {{ hero.id }}</div>
-<div>
-<label> Name:
-	<input [(ngModel)]="hero.name" placeholder="name">	
-</label>
+
+<div class="ui grid">
+	<div class="four column row">
+		<div class="left floated column">
+			<div class="ui blue form segment">
+				<div class="ui horizontal divider"> DETAILS</div>
+			<div *ngIf="hero">
+			<h3> {{ hero.name | uppercase }} Details </h3>
+			<div><span>Id:</span> {{ hero.id }}</div>
+			<div>
+				<div class="field">
+			<label> Name: </label>
+				<input [(ngModel)]="hero.name" placeholder="name">	
+			
+		</div>
+			</div>
+		</div>
+		</div>
+	</div>
 </div>
-
+</div>
 
 
 <!-- Use of *ngFor as Loop. Host element is li, will repeat Host element for each item  -->
+
+<div class="ui grid">
+	<div class="four column row">
+		<div class="left floated column">
+		<div class="ui form segment">
+		<div class="ui middle aligned selection list">
+			<ul>
+				<li *ngFor="let hero of heroList" (click)="displayHero(hero)">
+					<span>{{ hero.name | uppercase }}</span>
+					<span>{{ hero.id }}</span>
+				</li>
+			</ul>
+		</div>
 </div>
-<div>
-	<ul>
-		<li *ngFor="let hero of heroList" (click)="displayHero(hero)">
-			<span>{{ hero.name | uppercase }}</span>
-			<span>{{ hero.id }}</span>
-		</li>
-	</ul>
 </div>
+</div>
+
+
 
 
 <!-- ngModel is used for Two Way Data Binding -->
