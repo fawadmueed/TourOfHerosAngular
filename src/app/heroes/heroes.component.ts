@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-//Importing Class - HERO - from -Location ../hero
 import { Hero } from '../hero'
 import { Heroine } from '../hero'
 
@@ -9,6 +8,7 @@ import { Heroine } from '../hero'
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
+
 export class HeroesComponent implements OnInit {
 
   constructor() { }
@@ -17,20 +17,8 @@ export class HeroesComponent implements OnInit {
   	// LifeCycle hook , Angular call it shortly after creating component
   }
 
-  //Object hero of class Hero , with id= and name=
-  hero: Hero;
 
-  	//Creating Array of Objects
-  // heroines: Heroine[]=[{
-  // 	id:202,
-  // 	name:'Hira',
-  // 	sex:'Female'
-  // },
-  // {
-  // 	id:204,
-  // 	name:'Anabia',
-  // 	sex:'Female'
-  // }]
+ selectedHero : Hero;
 
   heroList : Hero[]=[
 
@@ -46,13 +34,25 @@ export class HeroesComponent implements OnInit {
   { id: 20, name: 'Tornado' }
 ];
 
-displayHero(catchedHero: Hero): void {
+	detailsHero(catchedHero: Hero): void {
 
 		// console.log(catchedHero);
-	this.hero = catchedHero;
+	this.selectedHero = catchedHero;
 
 }
 
+
+// INPUT BINDING - Testings
+	
+	bind1_parent: Hero=
+	{
+		id: 22, name: 'bind1_parent Property Assigned to bind1_child' 
+	}
+
+	bind2_parent: Hero=
+	{
+		id: 22, name: 'bind2_parent Property Assigned to bind2_child' 
+	}
   
 
 }

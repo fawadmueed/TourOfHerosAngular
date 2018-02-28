@@ -9,3 +9,4 @@ export class Heroine {
 	name: string;
 	sex: string;
 }
+

@@ -3,8 +3,24 @@
 <!-- //App Component -->
 
   <div class="ui container">
-    <h1 class="ttle">{{ title }}</h1> 
-    <h3>by - {{ designer }}</h3>
-  <!-- Hero Component -->
-  <h1><app-heroes></app-heroes></h1>
-</div>
+    <div class="ui grid">
+      <div class="sixteen wide column">
+        <div class="ui segment center aligned">
+        <h1 class="ttle">{{ title }}</h1> 
+          <h3>by - {{ designer }}</h3>
+        </div>
+      </div>
+  
+    
+
+
+    <div class="ui grid">
+      
+      <div class="sixteen wide column">
+        <div class="ui teal segment">
+          <app-heroes></app-heroes> 
+        </div>      
+      </div>
+    </div>
+  </div>
+
